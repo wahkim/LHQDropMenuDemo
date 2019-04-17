@@ -15,6 +15,9 @@
 		3E3DF2322266C08E0062015F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DF2312266C08E0062015F /* main.m */; };
 		3E3DF23C2266C08E0062015F /* LHQDropMenuDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DF23B2266C08E0062015F /* LHQDropMenuDemoTests.m */; };
 		3E3DF2472266C08E0062015F /* LHQDropMenuDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DF2462266C08E0062015F /* LHQDropMenuDemoUITests.m */; };
+		3E3DF25B2266C0B20062015F /* LHQDropDownMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DF2562266C0B20062015F /* LHQDropDownMenuView.m */; };
+		3E3DF25C2266C0B20062015F /* LHQIndexPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DF2582266C0B20062015F /* LHQIndexPatch.m */; };
+		3E3DF25D2266C0B20062015F /* LHQSubTitleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DF25A2266C0B20062015F /* LHQSubTitleModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		3E3DF2422266C08E0062015F /* LHQDropMenuDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LHQDropMenuDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E3DF2462266C08E0062015F /* LHQDropMenuDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHQDropMenuDemoUITests.m; sourceTree = "<group>"; };
 		3E3DF2482266C08E0062015F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E3DF2552266C0B20062015F /* LHQDropDownMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQDropDownMenuView.h; sourceTree = "<group>"; };
+		3E3DF2562266C0B20062015F /* LHQDropDownMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQDropDownMenuView.m; sourceTree = "<group>"; };
+		3E3DF2572266C0B20062015F /* LHQIndexPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQIndexPatch.h; sourceTree = "<group>"; };
+		3E3DF2582266C0B20062015F /* LHQIndexPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQIndexPatch.m; sourceTree = "<group>"; };
+		3E3DF2592266C0B20062015F /* LHQSubTitleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQSubTitleModel.h; sourceTree = "<group>"; };
+		3E3DF25A2266C0B20062015F /* LHQSubTitleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQSubTitleModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +114,7 @@
 				3E3DF2232266C08B0062015F /* AppDelegate.m */,
 				3E3DF2252266C08B0062015F /* ViewController.h */,
 				3E3DF2262266C08B0062015F /* ViewController.m */,
+				3E3DF2542266C0B20062015F /* DropDownMenu */,
 				3E3DF2282266C08B0062015F /* Main.storyboard */,
 				3E3DF22B2266C08E0062015F /* Assets.xcassets */,
 				3E3DF22D2266C08E0062015F /* LaunchScreen.storyboard */,
@@ -130,6 +140,19 @@
 				3E3DF2482266C08E0062015F /* Info.plist */,
 			);
 			path = LHQDropMenuDemoUITests;
+			sourceTree = "<group>";
+		};
+		3E3DF2542266C0B20062015F /* DropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				3E3DF2552266C0B20062015F /* LHQDropDownMenuView.h */,
+				3E3DF2562266C0B20062015F /* LHQDropDownMenuView.m */,
+				3E3DF2572266C0B20062015F /* LHQIndexPatch.h */,
+				3E3DF2582266C0B20062015F /* LHQIndexPatch.m */,
+				3E3DF2592266C0B20062015F /* LHQSubTitleModel.h */,
+				3E3DF25A2266C0B20062015F /* LHQSubTitleModel.m */,
+			);
+			path = DropDownMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +286,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E3DF2272266C08B0062015F /* ViewController.m in Sources */,
+				3E3DF25C2266C0B20062015F /* LHQIndexPatch.m in Sources */,
+				3E3DF25D2266C0B20062015F /* LHQSubTitleModel.m in Sources */,
 				3E3DF2322266C08E0062015F /* main.m in Sources */,
 				3E3DF2242266C08B0062015F /* AppDelegate.m in Sources */,
+				3E3DF25B2266C0B20062015F /* LHQDropDownMenuView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +464,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PP4T4JWN4J;
 				INFOPLIST_FILE = LHQDropMenuDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +482,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PP4T4JWN4J;
 				INFOPLIST_FILE = LHQDropMenuDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

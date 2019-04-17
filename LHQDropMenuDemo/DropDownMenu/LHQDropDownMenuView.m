@@ -7,7 +7,7 @@
 //
 
 #import "LHQDropDownMenuView.h"
-#import "WTSubTitleModel.h"
+#import "LHQSubTitleModel.h"
 
 #define kSCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
 #define kSCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
@@ -80,7 +80,7 @@
     [subTitles enumerateObjectsUsingBlock:^(NSArray *obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSMutableArray *array = [NSMutableArray array];
         [obj enumerateObjectsUsingBlock:^(NSString *objc, NSUInteger idx, BOOL * _Nonnull stop) {
-            WTSubTitleModel *model = [[WTSubTitleModel alloc]init];
+            LHQSubTitleModel *model = [[LHQSubTitleModel alloc]init];
             model.isSelect = NO;
             model.subTitle = objc;
             [array addObject:model];
@@ -206,7 +206,7 @@
         cell.textLabel.font = [UIFont systemFontOfSize:_cellTitleFontSize];
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    WTSubTitleModel *model = _subTitleModels[_currentSelectColumn][indexPath.row];
+    LHQSubTitleModel *model = _subTitleModels[_currentSelectColumn][indexPath.row];
     cell.textLabel.text = model.subTitle;
     // 上次选中行
     if (model.isSelect == NO) {
@@ -224,10 +224,10 @@
         _currentSelectSections[_currentSelectColumn] = [NSNumber numberWithInteger:indexPath.row];
         
         NSArray *currentArray = _subTitleModels[_currentSelectColumn];
-        [currentArray enumerateObjectsUsingBlock:^(WTSubTitleModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [currentArray enumerateObjectsUsingBlock:^(LHQSubTitleModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
             obj.isSelect = NO;
         }];
-        WTSubTitleModel *model = _subTitleModels[_currentSelectColumn][indexPath.row];
+        LHQSubTitleModel *model = _subTitleModels[_currentSelectColumn][indexPath.row];
         model.isSelect = YES;
         
         [self animateForTitleLayer:titleLayer indicator:_currentIndicatorLayers[_currentSelectColumn] show:YES complete:^{
@@ -238,7 +238,7 @@
             self.isShow = NO;
         }];
         if ([self.delegate respondsToSelector:@selector(menuView:selectIndex:value:)]) {
-            WTIndexPatch *index = [[WTIndexPatch alloc] initWithColumn:_currentSelectColumn section:indexPath.row];
+            LHQIndexPatch *index = [[LHQIndexPatch alloc] initWithColumn:_currentSelectColumn section:indexPath.row];
             [self.delegate menuView:self selectIndex:index value:model.subTitle];
         }
     }

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WTIndexPatch.h"
+#import "LHQIndexPatch.h"
 
 typedef NS_ENUM(NSUInteger, DropDownMenuStyle) {
     DropDownMenuStyleTableView = 0, // 普通tableview 仅支持一级菜单
@@ -15,9 +15,9 @@ typedef NS_ENUM(NSUInteger, DropDownMenuStyle) {
 };
 
 @class LHQDropDownMenuView;
-@protocol WTDropDownMenuViewDelegate <NSObject>
+@protocol LHQDropDownMenuViewDelegate <NSObject>
 - (void)menuView:(LHQDropDownMenuView *)menu tfColumn:(NSInteger)column; // 菜单被点击
-- (void)menuView:(LHQDropDownMenuView *)menu selectIndex:(WTIndexPatch *)index value:(NSString *)value; // 下拉菜单被点击
+- (void)menuView:(LHQDropDownMenuView *)menu selectIndex:(LHQIndexPatch *)index value:(NSString *)value; // 下拉菜单被点击
 @end
 
 @interface LHQDropDownMenuView : UIView
@@ -60,7 +60,7 @@ typedef NS_ENUM(NSUInteger, DropDownMenuStyle) {
 // 动画时间, 默认0.25
 @property (assign, nonatomic) CGFloat kAnimationDuration;
 
-@property (nonatomic, weak) id<WTDropDownMenuViewDelegate> delegate;
+@property (nonatomic, weak) id<LHQDropDownMenuViewDelegate> delegate;
 
 - (void)hidenMenuView;
 
